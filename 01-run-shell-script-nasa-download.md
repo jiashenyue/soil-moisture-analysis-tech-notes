@@ -62,7 +62,7 @@ ls
 
     -   By default, Notepad tries to save this file as a **Text Documents**, or `.txt`
 
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/001-tech-note.png)
 
 ```         
 - This will create trouble in the future as we do not want to run Shell script file using Notepad
@@ -70,7 +70,7 @@ ls
 
 -   Make sure you select **All Files** while saving, this will ensure the Shell script is saved as a script
 
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/002-tech-note.png)
 
 ### Changing line endings to Unix style
 
@@ -140,4 +140,4 @@ chmod +x download_script.sh
 -   Once login credentials are entered, it may take **up to 2 minutes** for the download to start
 -   Below is a screenshot showing the download process
 
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/003-tech-note.png)
