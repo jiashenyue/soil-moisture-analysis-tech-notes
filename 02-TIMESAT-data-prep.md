@@ -30,7 +30,7 @@ Shenyue Jia | 05/23/2024
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/008-tech-note.png)
 
 **Descending overpass coverage of California**
-![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/007-tech-note.pngs)
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/007-tech-note.png)
 
 ## Separating individual bands
 
