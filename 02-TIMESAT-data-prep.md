@@ -55,7 +55,7 @@ Shenyue Jia | 05/23/2024
 ## TIMESAT installation
 - Follow the tutorial of TIMESAT 3.3 in [this link](https://web.nateko.lu.se/timesat/docs/TIMESAT33_SoftwareManual.pdf)
   - Make sure you download the TIMESAT standalone version 3.3 for Windows users without Matlab
-    -[Download link](https://web.nateko.lu.se/timesat/timesat.asp?cat=4)
+    - [Download link](https://web.nateko.lu.se/timesat/timesat.asp?cat=4)
 
 ## An example of reading a BIL image in TIMESAT
 
@@ -73,7 +73,7 @@ Shenyue Jia | 05/23/2024
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/013-tech-note.png)
 
 - If all parameters are correctly added, the image will show up like this
-  - Adjusting the minimal value of pixel can help you see more details of the subtle changes
+  - **Adjusting the minimal value of pixel can help you see more details of the subtle changes**
   - The default minimal value is sometimes too small to let the details show up
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/011-tech-note.png)
