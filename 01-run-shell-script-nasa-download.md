@@ -1,5 +1,7 @@
 # Tech Note 1: How to run `.sh` script in Windows 11
 
+Shenyue Jia | 05/23/2024
+
 ## Overview
 
 -   This document is a step-by-step guide on how to run a Shell Script (`.sh`) file in Windows 11
