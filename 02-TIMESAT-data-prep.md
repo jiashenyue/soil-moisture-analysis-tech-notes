@@ -18,25 +18,25 @@ Shenyue Jia | 05/23/2024
   - [More inforation about ascending and descending scanning of SMAP](https://smap.jpl.nasa.gov/data/)
 
 **Two bands**
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/004-tech-note.png)
 
 **Ascending overpass**
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/005-tech-note.png)
 
 **Descending overpass**
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/006-tech-note.png)
 
 **Ascending overpass coverage of California**
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/008-tech-note.png)
 
 **Descending overpass coverage of California**
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/007-tech-note.pngs)
 
 ## Separating individual bands
 
 - Keep using a consistent collection (ascending or descending)
   - The same location does not get daily coverage
-- After downloading and subsetting all 1-km SMAP product, loop over all subsetted images to separate **Band 2** from the original image if using descending images
+- After downloading and subsetting all 1-km SMAP products, loop over all subsetted images to separate **Band 2** from the original image if using descending images
 
 ## Converting TIF to a binary image (BIL)
 
@@ -46,7 +46,7 @@ Shenyue Jia | 05/23/2024
   - TIMESAT needs this information (columns and rows) and data type of values stored in this matrix to read the data
 
 **An example of binary image matrix**  
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/009-tech-note.png)
 
 - BIL (.bil) format is a widely used binary image format
   - BIL means “band interleaved by line”
@@ -61,22 +61,22 @@ Shenyue Jia | 05/23/2024
 
 - Open TIMESAT menu system and click TSM image view
 
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/010-tech-note.png)
 
 - Go to File/Open Image File to identify a binary (.bil) you have saved
 
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/012-tech-note.png)
 
 - You also need the number of rows and columns per image information
   - If using ArcGIS Pro, you can get the information from layer properties
 
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/013-tech-note.png)
 
 - If all parameters are correctly added, the image will show up like this
   - Adjusting the minimal value of pixel can help you see more details of the subtle changes
   - The default minimal value is sometimes too small to let the details show up
 
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/011-tech-note.png)
 
 ## Reference
 - [A tutorial of time series analysis using TIMESAT](https://datapartnership.org/syria-economic-monitor/notebooks/vegetation-conditions/Seasonality_Parameters_Data_Extraction.html)
