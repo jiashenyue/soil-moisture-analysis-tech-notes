@@ -1,82 +1,120 @@
 # Tech Note 2: Preparing data for TIMESAT analysis
 
-Shenyue Jia | 05/23/2024
+Shenyue Jia \| 05/23/2024
 
 ## Overview
 
-- This tutorial focuses on a 1-km downscaled SMAP soil moisture data product
-  - SMAP-Derived 1-km Downscaled Surface Soil Moisture Product, Version 1
-  - [More information](https://nsidc.org/data/nsidc-0779/versions/1)
-- The original GeoTIFF images of this product needs further process to be utilized in TIMESAT
-  - Separating ascending and descending overpass as individual files
-  - Converting all GeoTIFF images to BIL (binary format) to be used in TIMESAT
+-   This tutorial focuses on a 1-km downscaled SMAP soil moisture data product
+    -   SMAP-Derived 1-km Downscaled Surface Soil Moisture Product, Version 1
+    -   [More information](https://nsidc.org/data/nsidc-0779/versions/1)
+-   The original GeoTIFF images of this product needs further process to be utilized in TIMESAT
+    -   Separating ascending and descending overpass as individual files
+    -   Converting all GeoTIFF images to BIL (binary format) to be used in TIMESAT
 
 ## About ascending and descending overpass of SMAP
-- Each GeoTIFF image from this data product contains **two bands**, representing the ascending and descending overpass of SMAP
-  - Ascending (AM): occurs at 0600 hrs local time 
-  - Descending (PM): occurs at 1800 hrs local time 
-  - [More inforation about ascending and descending scanning of SMAP](https://smap.jpl.nasa.gov/data/)
 
-**Two bands**
-![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/004-tech-note.png)
+-   Each GeoTIFF image from this data product contains **two bands**, representing the ascending and descending overpass of SMAP
+    -   Ascending (AM): occurs at 0600 hrs local time
+    -   Descending (PM): occurs at 1800 hrs local time
+    -   [More inforation about ascending and descending scanning of SMAP](https://smap.jpl.nasa.gov/data/)
 
-**Ascending overpass**
-![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/005-tech-note.png)
+**Two bands** ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/004-tech-note.png)
 
-**Descending overpass**
-![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/006-tech-note.png)
+**Ascending overpass** ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/005-tech-note.png)
 
-**Ascending overpass coverage of California**
-![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/008-tech-note.png)
+**Descending overpass** ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/006-tech-note.png)
 
-**Descending overpass coverage of California**
-![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/007-tech-note.png)
+**Ascending overpass coverage of California** ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/008-tech-note.png)
+
+**Descending overpass coverage of California** ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/007-tech-note.png)
 
 ## Separating individual bands
 
-- Keep using a consistent collection (ascending or descending)
-  - The same location does not get daily coverage
-- After downloading and subsetting all 1-km SMAP products, loop over all subsetted images to separate **Band 2** from the original image if using descending images
+-   Keep using a consistent collection (ascending or descending)
+    -   The same location does not get daily coverage
+-   After downloading and subsetting all 1-km SMAP products, loop over all subsetted images to separate **Band 2** from the original image if using descending images
 
 ## Converting TIF to a binary image (BIL)
 
-- TIMESAT can only read a binary image
-  - TIF (GeoTIFF) is NOT a binary image since the original data has been compressed
-- A binary image is a straightforward matrix with X and Y as Columns and Rows
-  - TIMESAT needs this information (columns and rows) and data type of values stored in this matrix to read the data
+-   TIMESAT can only read a binary image
+    -   TIF (GeoTIFF) is NOT a binary image since the original data has been compressed
+-   A binary image is a straightforward matrix with X and Y as Columns and Rows
+    -   TIMESAT needs this information (columns and rows) and data type of values stored in this matrix to read the data
 
-**An example of binary image matrix**  
+**An example of binary image matrix**\
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/009-tech-note.png)
 
-- BIL (.bil) format is a widely used binary image format
-  - BIL means “band interleaved by line”
-  - [More information about BIL and other formats of binary image](https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/bil-bip-and-bsq-raster-files.htm)
+-   BIL (.bil) format is a widely used binary image format
+    -   BIL means "band interleaved by line"
+    -   [More information about BIL and other formats of binary image](https://desktop.arcgis.com/en/arcmap/latest/manage-data/raster-and-images/bil-bip-and-bsq-raster-files.htm)
 
 ## TIMESAT installation
-- Follow the tutorial of TIMESAT 3.3 in [this link](https://web.nateko.lu.se/timesat/docs/TIMESAT33_SoftwareManual.pdf)
-  - Make sure you download the TIMESAT standalone version 3.3 for Windows users without Matlab
-    - [Download link](https://web.nateko.lu.se/timesat/timesat.asp?cat=4)
+
+### Download TIMESAT
+
+-   Follow the tutorial of TIMESAT 3.3 in [this link](https://web.nateko.lu.se/timesat/docs/TIMESAT33_SoftwareManual.pdf)
+    -   Make sure you download the TIMESAT version 3.3 for Windows users **with** Matlab installed
+        -   [Download link](https://web.nateko.lu.se/timesat/timesat.asp?cat=4)
+
+### Matlab free trial installation
+
+-   As students or academia users, we can download a free trial version of Matlab
+    -   [Download link](https://www.mathworks.com/products/matlab/student.html)
+    -   This requires your \*.edu email address and account registration with this email address
+    -   After registrating an account with Matlab, you can find the download options for different versions of Matlab
+-   I downloaded Matlab 2016b and installed this version just in case there is anything wrong with the latest version
+    -   This installation may take some time as I recommend installing all the libraries come with the software
+    -   Also download and install the updates for Matlab 2016b
+
+### Configure paths in Matlab to run TIMESAT
+
+-   We need to add TIMESAT installation folder in Matlab so that the program can run
+    -   You can also find the same directions in [TIMESAT 3.3 Software Manual](https://web.nateko.lu.se/personal/Lars.Eklundh/TIMESAT/prog/version33/TIMESAT33_SoftwareManual.pdf), **page 47**
+
+1.  Click **Set Path** menu
+
+![img]()
+
+2.  Click *Add with Subfolders*
+
+![img]()
+
+3.  Navigate to the folder **timesat_matlab** under the main **timesat33** folder
+4.  *Save* and *Close*
+5.  After this, set the TIMESAT working directory to \*\*timesat33\run\*\*
+
+-   Click the Working Directory bar to navigate to your \*\*timesat33\run\*\* folder
+
+![img]()
+
+6.  Type **TIMESAT** in Matlab Command Window to run the program
+
+![img]()
 
 ## An example of reading a BIL image in TIMESAT
 
-- Open TIMESAT menu system and click TSM image view
+-   Open TIMESAT menu system and click TSM image view
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/010-tech-note.png)
 
-- Go to File/Open Image File to identify a binary (.bil) you have saved
+-   Go to File/Open Image File to identify a binary (.bil) you have saved
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/012-tech-note.png)
 
-- You also need the number of rows and columns per image information
-  - If using ArcGIS Pro, you can get the information from layer properties
+-   You also need the number of rows and columns per image information
+    -   If using ArcGIS Pro, you can get the information from layer properties
+    -   *Updated on 5/30/24*
+      - **If using a BIL subset by your Python script with `arcpy`, please use a new version of rows and cols as this is slightly different from the old numbers I provided**
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/013-tech-note.png)
 
-- If all parameters are correctly added, the image will show up like this
-  - **Adjusting the minimal value of pixel can help you see more details of the subtle changes**
-  - The default minimal value is sometimes too small to let the details show up
+-   If all parameters are correctly added, the image will show up like this
+    -   **Adjusting the minimal value of pixel can help you see more details of the subtle changes**
+    -   The default minimal value is sometimes too small to let the details show up
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/011-tech-note.png)
 
 ## Reference
-- [A tutorial of time series analysis using TIMESAT](https://datapartnership.org/syria-economic-monitor/notebooks/vegetation-conditions/Seasonality_Parameters_Data_Extraction.html)
+
+-   [A tutorial of time series analysis using TIMESAT](https://datapartnership.org/syria-economic-monitor/notebooks/vegetation-conditions/Seasonality_Parameters_Data_Extraction.html)
+-   [TIMESAT 3.3 Software Manual](https://web.nateko.lu.se/personal/Lars.Eklundh/TIMESAT/prog/version33/TIMESAT33_SoftwareManual.pdf)
