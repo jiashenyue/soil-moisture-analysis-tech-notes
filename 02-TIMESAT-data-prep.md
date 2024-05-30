@@ -1,6 +1,6 @@
 # Tech Note 2: Preparing data for TIMESAT analysis
 
-Shenyue Jia \| 05/23/2024
+Shenyue Jia | 05/23/2024
 
 ## Overview
 
@@ -93,7 +93,7 @@ Shenyue Jia \| 05/23/2024
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/018-tech-note.png)
 
-## An example of reading a BIL image in TIMESAT
+## An example of visualizing a BIL image in TIMESAT
 
 -   After starting TIMESAT, click TSM image view
 
@@ -101,12 +101,11 @@ Shenyue Jia \| 05/23/2024
 
 -   Go to File/Open Image File to identify a binary (.bil) you have saved
 
-![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/012-tech-note.png)
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/011-tech-note.png)
 
 -   You also need the number of rows and columns per image information
     -   If using ArcGIS Pro, you can get the information from layer properties
-    -   *Updated on 5/30/24*
-      - **If using a BIL subset by your Python script with `arcpy`, please use the following version of rows and cols as this is slightly different from the old numbers I provided**
+    -   **Updated on 5/30/24: If using a BIL subset by your Python script with `arcpy`, please use the following version of rows and cols as this is slightly different from the old numbers I provided**
         - Number of rows: 966
         - Number of cols: 998
 
@@ -116,7 +115,31 @@ Shenyue Jia \| 05/23/2024
     -   **Adjusting the minimal value of pixel can help you see more details of the subtle changes**
     -   The default minimal value is sometimes too small to let the details show up
 
-![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/011-tech-note.png)
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/012-tech-note.png)
+
+## Read a list of BIL images for time series analysis
+
+### Obtain a `txt` file with only `.bil` files in a directory
+
+- Open Windows PowerShell
+  - Press `Win` + `S` to open the search bar, type "PowerShell", and select "Windows PowerShell" or "Windows PowerShell (Admin)" if you need administrative privileges.
+  - Or just search for `PowerShell` to run this program
+- Run the script below
+
+##
+        # Define the directory you want to search
+        $directory = "C:\path\to\your\directory"
+        # Define the output text file path
+        $outputFile = "C:\path\to\your\output.txt"
+        # Get the full paths of all .bil files in the directory
+        Get-ChildItem -Path $directory -Filter *.bil -Recurse | Select-Object -ExpandProperty FullName | Out-File -FilePath $outputFile -Encoding UTF8
+
+- Replace `C:\path\to\your\directory` with the actual path to the directory where your .bil files are located. Also, replace `C:\path\to\your\output.txt` with the desired output file path and name.
+
+# Confirm the operation
+Write-Output "Paths of all .bil files have been saved to $outputFile"
+
+
 
 ## Reference
 
