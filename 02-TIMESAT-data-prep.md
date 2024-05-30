@@ -135,6 +135,16 @@ Shenyue Jia | 05/23/2024
         Get-ChildItem -Path $directory -Filter *.bil -Recurse | Select-Object -ExpandProperty FullName | Out-File -FilePath $outputFile -Encoding UTF8
 
 - Replace `C:\path\to\your\directory` with the actual path to the directory where your .bil files are located. Also, replace `C:\path\to\your\output.txt` with the desired output file path and name.
+  - See an example below
+  
+![img]()
+
+- File list `txt` file
+
+![img]()
+
+- **I was not able to proceed to the next step as shown in this [tutorial](https://datapartnership.org/syria-economic-monitor/notebooks/vegetation-conditions/Seasonality_Parameters_Data_Extraction.html) as the `.txt` file I generated using the above command cannot be correctly opened due to some encoding error**
+  - To be updated in the future or feel free to explore your own solutions
 
 # Confirm the operation
 Write-Output "Paths of all .bil files have been saved to $outputFile"
