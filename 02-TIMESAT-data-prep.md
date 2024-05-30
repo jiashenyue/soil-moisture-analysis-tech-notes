@@ -137,13 +137,13 @@ Shenyue Jia | 05/23/2024
 - Replace `C:\path\to\your\directory` with the actual path to the directory where your .bil files are located. Also, replace `C:\path\to\your\output.txt` with the desired output file path and name.
   - See an example below
   
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/019-tech-note.png)
 
 - File list `txt` file
 
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/020-tech-note.png)
 
-- **I was not able to proceed to the next step as shown in this [tutorial](https://datapartnership.org/syria-economic-monitor/notebooks/vegetation-conditions/Seasonality_Parameters_Data_Extraction.html) as the `.txt` file I generated using the above command cannot be correctly opened due to some encoding error**
+- **5/30/24: I was not able to proceed to the next step as shown in this [tutorial](https://datapartnership.org/syria-economic-monitor/notebooks/vegetation-conditions/Seasonality_Parameters_Data_Extraction.html) as the `.txt` file I generated using the above command cannot be correctly opened due to some encoding error**
   - To be updated in the future or feel free to explore your own solutions
 
 # Confirm the operation
