@@ -1,7 +1,7 @@
 # Tech notes for soil moisture lag analysis project
 
 Shenyue Jia
-Updated on 5/24/2024
+Updated on 5/30/2024
 
 - This repository stores all sharable tech notes while conducting the soil moisture analysis project
 
