@@ -63,7 +63,7 @@ Shenyue Jia \| 05/23/2024
     -   This requires your \*.edu email address and account registration with this email address
     -   After registrating an account with Matlab, you can find the download options for different versions of Matlab
 -   I downloaded Matlab 2016b and installed this version just in case there is anything wrong with the latest version
-    -   This installation may take some time as I recommend installing all the libraries come with the software
+    -   This installation may take some time as I recommend installing all the libraries that come with the software
     -   Also download and install the updates for Matlab 2016b
 
 ### Configure paths in Matlab to run TIMESAT
@@ -71,13 +71,13 @@ Shenyue Jia \| 05/23/2024
 -   We need to add TIMESAT installation folder in Matlab so that the program can run
     -   You can also find the same directions in [TIMESAT 3.3 Software Manual](https://web.nateko.lu.se/personal/Lars.Eklundh/TIMESAT/prog/version33/TIMESAT33_SoftwareManual.pdf), **page 47**
 
-1.  Click **Set Path** menu
+1.  Click *Set Path* menu
 
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/014-tech-note.png)
 
 2.  Click *Add with Subfolders*
 
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/015-tech-note.png)
 
 3.  Navigate to the folder **timesat_matlab** under the main **timesat33** folder
 4.  *Save* and *Close*
@@ -85,15 +85,17 @@ Shenyue Jia \| 05/23/2024
 
 -   Click the Working Directory bar to navigate to your \*\*timesat33\run\*\* folder
 
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/016-tech-note.png)
 
 6.  Type **TIMESAT** in Matlab Command Window to run the program
 
-![img]()
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/017-tech-note.png)
+
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/018-tech-note.png)
 
 ## An example of reading a BIL image in TIMESAT
 
--   Open TIMESAT menu system and click TSM image view
+-   After starting TIMESAT, click TSM image view
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/010-tech-note.png)
 
@@ -104,7 +106,9 @@ Shenyue Jia \| 05/23/2024
 -   You also need the number of rows and columns per image information
     -   If using ArcGIS Pro, you can get the information from layer properties
     -   *Updated on 5/30/24*
-      - **If using a BIL subset by your Python script with `arcpy`, please use a new version of rows and cols as this is slightly different from the old numbers I provided**
+      - **If using a BIL subset by your Python script with `arcpy`, please use the following version of rows and cols as this is slightly different from the old numbers I provided**
+        - Number of rows: 966
+        - Number of cols: 998
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/013-tech-note.png)
 
