@@ -52,6 +52,53 @@ An image from [HDF Wikipedia Page](https://en.wikipedia.org/wiki/Hierarchical_Da
     -   Requires Java to run
 -   Download [HDFView for Win64](https://www.hdfgroup.org/downloads/hdfview/)
 
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/044-tech-note.png)
+
+- HDFView can help us get the information of variable names and scalars associated with 2-D variables, such as the scaling factor of a variable
+  - Information of an example HDF-5 file shown in HDFView
+
+### How to view HDF-5 file information from HDFView?
+
+- After loading a `.h5` data into HDFView, we will see a directory like this
+
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/045-tech-note.png)
+
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/046-tech-note.png)
+
+- In this example using VIIRS data, after expanding under `HDFEOS\GRIDS\VIIRS_Grid_16Day_VI_1km\Data Fields`, we will see a list of variables in their **long names**
+
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/047-tech-note.png)
+
+- If click on `1 km 16 days EVI2`, we will see more information of variables
+
+![img](![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/047-tech-note.png))
+
+  - This table shows the `Name` of variables and `Type` of each
+    - For example, `scale_factor` is a 64-bit floating point number
+- If double-clicking on `scale_factor`, a new window shows up and this value indicates the scale factor is `1.0E-4`, or `0.0001`
+
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/048-tech-note.png)
+
+- If double-clicking on `valid_range`, a new window shows the value range of this variable (EVI2)
+
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/049-tech-note.png)
+
+
+- Based on the information of `scale_factor` and `valid_range`, we can compute the actul valid value range is **-1 to 1**
+  - -10000*0.0001
+  - 10000*0.0001
+
+- Single-click on `Projection`, we will find the following variables
+  - If doubl-clicking each of them, we will find the values of these variables
+  
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/050-tech-note.png)
+
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/051-tech-note.png)
+
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/052-tech-note.png)
+
+- The information is useful as we can take an example of HDF-5 we want to read and know where to read some key information if an I/O library did not correctly find the information
+
 ## Open HDF data in ArcGIS Pro
 
 -   HDF will be treated as a **multidimensional** data type in ArcGIS Pro
@@ -85,8 +132,6 @@ An image from [HDF Wikipedia Page](https://en.wikipedia.org/wiki/Hierarchical_Da
 
 -   VIIRS and MODIS data uses a **sinusoidal** projection like below
   - Unlike a standard sinusoidal projection, VIIRS and MODIS products use a unique  sphere measuring 6371007.181 meters 
-  
-![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/039-tech-note.png)
 
 ![img](https://lpdaac.usgs.gov/media/images/modis_sinusoidal_grid.width-800.jpg)
 
@@ -106,9 +151,10 @@ An image from [HDF Wikipedia Page](https://en.wikipedia.org/wiki/Hierarchical_Da
   - If we change the map coordinate system  for display to the Sinusoidal projection in ArcGIS Pro, we will see an image with a dimension of 1200 by 1200 (a square as shown in the tiling system)
     - See how the boundary of California is distorted as a result of projection change
 
-![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/041-tech-note.png)
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/042-tech-note.png)
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/043-tech-note.png)
+
 
 ## Reference
 
