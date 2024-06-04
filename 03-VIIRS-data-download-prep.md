@@ -30,13 +30,15 @@ Shenyue Jia \| 06/04/2024
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/024-tech-note.png)
 
--   Select all these files and compress them to a `.zip` file ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/025-tech-note.png)
+-   Select all these files and compress them to a `.zip` file
+
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/025-tech-note.png)
 
 -   After uploading this file, we will find a filter has been added but it has not limited the number of granules we have
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/026-tech-note.png)
 
--   Collapse the panel showing data collections first\
+-   Collapse the panel showing data collections first
 -   Click the boundary of California shown in the map after uploading the zip file to **activate** this area of interest
     -   California boundary will turn from brown to green if clicking to activate
 
