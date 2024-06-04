@@ -6,7 +6,6 @@ Shenyue Jia \| 06/04/2024
 
 -   This tutorial focuses on how to download VIIRS data from NASA Earthdata Search and prepare them for future use
     -   We will use VIIRS Vegetation Indices (1km, 16-day, [VNP13A2 v002](https://lpdaac.usgs.gov/products/vnp13a2v002/)) as an example
--   Some basic information about HDF (Hierarchical Data Format) data
 
 ## Search VNP13A2 data from NASA Earthdata Search
 
@@ -63,6 +62,8 @@ Shenyue Jia \| 06/04/2024
     -   h08v05 (vast majority of California)
     -   h08v04 (northeast corner bordering Nevada)
     -   h09v04 (northwest corner bordering Oregon)
+- MODIS/VIIRS tiling system
+  - 460 non-fill tiles (10 deg by 10 deg at the equator)
 
 ## VIIRS data download
 
