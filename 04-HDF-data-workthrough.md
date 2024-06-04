@@ -47,7 +47,7 @@ An image from [HDF Wikipedia Page](https://en.wikipedia.org/wiki/Hierarchical_Da
 
 ## Check the structure of HDF with HDFViewer
 
--   An open source tool provided by the developer of HDF
+-   An open-source tool provided by the developer of HDF
     -   [Download link](https://www.hdfgroup.org/downloads/hdfview/)
     -   Requires Java to run
 -   Download [HDFView for Win64](https://www.hdfgroup.org/downloads/hdfview/)
@@ -66,15 +66,12 @@ An image from [HDF Wikipedia Page](https://en.wikipedia.org/wiki/Hierarchical_Da
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/046-tech-note.png)
 
 - In this example using VIIRS data, after expanding under `HDFEOS\GRIDS\VIIRS_Grid_16Day_VI_1km\Data Fields`, we will see a list of variables in their **long names**
+- If click on `1 km 16 days EVI2`, we will see more information of variables
+  - This table shows the `Name` of variables and `Type` of each
+    - For example, `scale_factor` is a 64-bit floating point number
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/047-tech-note.png)
 
-- If click on `1 km 16 days EVI2`, we will see more information of variables
-
-![img](![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/047-tech-note.png))
-
-  - This table shows the `Name` of variables and `Type` of each
-    - For example, `scale_factor` is a 64-bit floating point number
 - If double-clicking on `scale_factor`, a new window shows up and this value indicates the scale factor is `1.0E-4`, or `0.0001`
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/048-tech-note.png)
@@ -84,12 +81,12 @@ An image from [HDF Wikipedia Page](https://en.wikipedia.org/wiki/Hierarchical_Da
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/049-tech-note.png)
 
 
-- Based on the information of `scale_factor` and `valid_range`, we can compute the actul valid value range is **-1 to 1**
-  - -10000*0.0001
-  - 10000*0.0001
+- Based on the information of `scale_factor` and `valid_range`, we can compute the actual valid value range is `-1` to `1`
+  - `-10000`*`0.0001` = `1`
+  - `10000`*`0.0001` = `1`
 
 - Single-click on `Projection`, we will find the following variables
-  - If doubl-clicking each of them, we will find the values of these variables
+  - If double-clicking each of them, we will find the values of these variables
   
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/050-tech-note.png)
 
