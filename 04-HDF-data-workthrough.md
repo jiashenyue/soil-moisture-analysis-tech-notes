@@ -11,7 +11,7 @@ Shenyue Jia \| 06/04/2024
 
 **Example: VNP13A2.A2014353.h08v04.002.2024063093840.h5**
 
--   `VNP13A21`: Data collection name
+-   `VNP13A2`: Data collection name
 -   `A2014353`: Data acquisition date
     -   This file is data for the year 2014 and on day of year (DOY) 353
     -   [DOY calendar](https://gml.noaa.gov/grad/antuv/Calendar.jsp)
