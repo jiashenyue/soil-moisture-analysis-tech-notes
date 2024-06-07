@@ -133,7 +133,7 @@ An image from [HDF Wikipedia Page](https://en.wikipedia.org/wiki/Hierarchical_Da
 ![img](https://lpdaac.usgs.gov/media/images/modis_sinusoidal_grid.width-800.jpg)
 
   - If we zoom in to tile h08v05, we will find the tile covering most of California
-    - This tile is a square with dimension of 1200 x 1200
+    - This tile is a square with dimensions of 1200 x 1200
   
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/040-tech-note.png)
 
@@ -151,6 +151,10 @@ An image from [HDF Wikipedia Page](https://en.wikipedia.org/wiki/Hierarchical_Da
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/042-tech-note.png)
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/043-tech-note.png)
+
+## Reading HDF-5 and writing to GeoTIFF
+
+- [This tutorial](https://lpdaac.usgs.gov/documents/131/VIIRS_SR_Tutorial.html) by USGS/NASA shows how to read VIIRS data product (HDF-5 files) correctly and writing selected variables as GeoTIFF with correct georeferencing info
 
 
 ## Reference
