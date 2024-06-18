@@ -143,7 +143,7 @@ Shenyue Jia | 05/23/2024
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/020-tech-note.png)
 
-- For some reason, the above command still produced a `txt` file encoded with **UTF-8 BOM**, this will cause trouble in the next step
+- For some reason, the above command still produced a `txt` file encoded with **UTF-8 with BOM**, this will cause trouble in the next step
 - Save this file to a new file and change the encoding type to **UTF-8**
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/056-tech-note.png)
@@ -175,11 +175,11 @@ Shenyue Jia | 05/23/2024
   
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/057-tech-note.png)
 
-    - Select a second image and it draws correctly
+- Select a second image and it draws correctly
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/058-tech-note.png)
 
-    - Switch back to the first image and it draws correctly
+- Switch back to the first image and it draws correctly
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/059-tech-note.png)
 
