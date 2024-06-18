@@ -171,18 +171,17 @@ Shenyue Jia | 05/23/2024
 
 - Select a file and put correct file type and dimension info to load
   - If the first file does not load with an error, select another file to draw with the dimension info and data type info
+    - Error if selecting the first image to load
   
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/057-tech-note.png)
 
-Error if selecting the first image to load
+    - Select a second image and it draws correctly
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/058-tech-note.png)
 
-Select a second image and it draws correctly
+    - Switch back to the first image and it draws correctly
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/059-tech-note.png)
-
-Switch back to the first image and it draws correctly
 
 ### Tips for troubleshooting
 
