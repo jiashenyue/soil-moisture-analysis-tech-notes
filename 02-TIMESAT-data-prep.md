@@ -143,12 +143,29 @@ Shenyue Jia | 05/23/2024
 
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/020-tech-note.png)
 
-- **5/30/24: I was not able to proceed to the next step as shown in this [tutorial](https://datapartnership.org/syria-economic-monitor/notebooks/vegetation-conditions/Seasonality_Parameters_Data_Extraction.html) as the `.txt` file I generated using the above command cannot be correctly opened due to some encoding error**
-  - To be updated in the future or feel free to explore your own solutions
+- Adding a line for the number of files included in this `txt` file so that TIMESAT can read data correctly
+  - For example, this sample file below contains **5** BIL files
+  - We need to put **5** in the first line of the `txt` file so that TIMESAT knows how many files to load
 
-# Confirm the operation
-Write-Output "Paths of all .bil files have been saved to $outputFile"
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/053-tech-note.png)
 
+- Open this new version of file list file in TIMESAT TSM_imageview window
+
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/055-tech-note.png)
+
+- Select a file and put correct file type and dimension info to load
+  - If the first file does not load, select another file to try
+
+![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/054-tech-note.png)
+
+### Tips for troubleshooting
+
+- Check the format and content of file in `..\timesat33\data\`
+  - This is a folder with sample data to run the tutorial in TIMESAT Software Manual (see **Sec. 9 Getting started with TIMESAT - a quick tutorial**)
+  - Directory `wa` under this folder saves a number of NDVI images in a consecutive time series (same as the format we will be working on)
+  - You can check the content of `ndvilistwa.txt` under `..\data\wa\` to see the correct format of a file list that can be read by TIMESAT
+
+- We can learn how to conduct further analysis step by step with the sample data and the tutorial before applying our own data to make sure we understand the meaning of these metrics
 
 
 ## Reference
