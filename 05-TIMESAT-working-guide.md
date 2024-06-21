@@ -32,6 +32,7 @@ Shenyue Jia | 06/21/2024
 - Click Processing window to enable a haircross cursor to select the upper left and lower right point of window for processing
   - **Select an area with data**
   - Click return
+  - **This step needs at least two years of data to work out**
   
 ![img](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/pics/062-tech-note.png)
 
