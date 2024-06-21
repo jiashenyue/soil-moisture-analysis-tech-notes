@@ -12,7 +12,7 @@ Updated on 6/4/2024
 2. [Data preparation for TIMESAT analysis](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/02-TIMESAT-data-prep.md)
 3. [Download VIIRS Vegetation Indices Data and process HDF files](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/03-VIIRS-data-download-prep.md)
 4. [Understand and process HDF files for VIIRS Vegetation Indices Data](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/04-HDF-data-workthrough.md)
-5. [Tech Note 5: Working in TIMESAT](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/05-TIMESAT-working-guide.md)
+5. [Working in TIMESAT](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/05-TIMESAT-working-guide.md)
 
 ## Reference
 
