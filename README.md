@@ -2,8 +2,6 @@
 
 Shenyue Jia
 
-Updated on 6/21/2024
-
 - This repository stores all sharable tech notes while conducting the soil moisture analysis project
 
 ## Tutorials
