@@ -13,6 +13,7 @@ Updated on 6/21/2024
 3. [Download VIIRS Vegetation Indices Data and process HDF files](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/03-VIIRS-data-download-prep.md)
 4. [Understand and process HDF files for VIIRS Vegetation Indices Data](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/04-HDF-data-workthrough.md)
 5. [Working in TIMESAT](https://github.com/jiashenyue/soil-moisture-analysis-tech-notes/blob/main/05-TIMESAT-working-guide.md)
+6. [TIMESAT seasonality calculation by Slade Laszewski](https://github.com/sladel11/Timesat-seasonality)
 
 ## Reference
 
